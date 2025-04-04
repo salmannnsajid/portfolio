@@ -19,16 +19,16 @@ interface AboutProps {
 const About: React.FC = () => {
   const { name, role, description, resume, social } = about as AboutProps;
 
-  const downloadPDF = (): void => {
-    const pdfPath = `${window.location.origin}/resume.pdf`; // Full URL
-    console.log("Downloading:", pdfPath);
+  const downloadFile = async () => {
+    const url =
+      "https://raw.githubusercontent.com/salmannnsajid/portfolio/master/public/resume.pdf"; // Raw file URL
+    const response = await fetch(url);
+    const blob = await response.blob();
 
     const link = document.createElement("a");
-    link.href = pdfPath;
-    link.download = "resume.pdf";
-    document.body.appendChild(link);
+    link.href = URL.createObjectURL(blob);
+    link.download = "resume.pdf"; // File name for the download
     link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -45,7 +45,7 @@ const About: React.FC = () => {
       <div className="about__contact center">
         {resume && (
           <button
-            onClick={downloadPDF}
+            onClick={downloadFile}
             type="button"
             className="btn btn--outline"
           >

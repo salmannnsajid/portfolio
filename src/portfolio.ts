@@ -9,7 +9,8 @@ const about = {
   role: "Front End Engineer",
   description:
     "Frontend Developer with 4 years of experience specializing in React.js and Next.js. Proven track record of developing intuitive and user-friendly interfaces, optimizing performance, and delivering high-quality web applications. Skilled in integrating advanced features and collaborating with cross-functional teams to enhance user engagement and streamline business processes.",
-  resume: "https://example.com",
+  resume:
+    "https://github.com/salmannnsajid/portfolio/blob/master/public/resume.pdf",
   social: {
     linkedin: "https://linkedin.com/in/salman-sajid-77297b1ba/",
     github: "https://github.com/salmannnsajid",
