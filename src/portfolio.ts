@@ -34,6 +34,14 @@ const projects = [
     // sourceCode: "https://github.com",
     livePreview: "https://staging.fatoraty.com/",
   },
+  {
+    name: "React Dashboard",
+    description:
+      "Designed and developed a dynamic and responsive Dashboard using React.js and Material-UI (MUI), ensuring a seamless user experience with efficient data visualization and interactive components.",
+    stack: ["React", "Material UI"],
+    // sourceCode: "https://github.com",
+    livePreview: "https://salmannnsajid.github.io/react-dashboard",
+  },
 ];
 
 const skills = [
