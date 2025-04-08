@@ -27,14 +27,6 @@ const projects = [
     livePreview: "https://app.galileoprotocol.io/",
   },
   {
-    name: "Fatoraty POS",
-    description:
-      "Developed a Point of Sale (POS) system designed to streamline the sales process for small businesses and retailers. The system enables users to manage inventory, customer data, and create professional invoices with ease.",
-    stack: ["React", "Redux", "Material UI"],
-    // sourceCode: "https://github.com",
-    livePreview: "https://staging.fatoraty.com/",
-  },
-  {
     name: "React Dashboard",
     description:
       "Designed and developed a dynamic and responsive Dashboard using React.js and Material-UI (MUI), ensuring a seamless user experience with efficient data visualization and interactive components.",
