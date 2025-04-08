@@ -31,7 +31,6 @@ const projects = [
     description:
       "Designed and developed a dynamic and responsive Dashboard using React.js and Material-UI (MUI), ensuring a seamless user experience with efficient data visualization and interactive components.",
     stack: ["React", "Material UI"],
-    // sourceCode: "https://github.com",
     livePreview: "https://salmannnsajid.github.io/react-dashboard",
   },
   {
@@ -39,7 +38,6 @@ const projects = [
     description:
       "This expense tracker React app helps users track income and expenses, set budgets, and view financial summaries.",
     stack: ["React", "Material UI"],
-    // sourceCode: "https://github.com",
     livePreview: "https://salmannnsajid.github.io/expense-tracker/",
   },
 ];
