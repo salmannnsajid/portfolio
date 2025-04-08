@@ -42,6 +42,14 @@ const projects = [
     // sourceCode: "https://github.com",
     livePreview: "https://salmannnsajid.github.io/react-dashboard",
   },
+  {
+    name: "Expense Tracker",
+    description:
+      "This expense tracker React app helps users track income and expenses, set budgets, and view financial summaries.",
+    stack: ["React", "Material UI"],
+    // sourceCode: "https://github.com",
+    livePreview: "https://salmannnsajid.github.io/expense-tracker/",
+  },
 ];
 
 const skills = [
