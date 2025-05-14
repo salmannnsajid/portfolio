@@ -24,7 +24,7 @@ const projects = [
       "Contributed to the development of the Galileo Protocol, a cutting-edge tokenization platform aimed at transforming the ownership and authentication of luxury goods and real-world assets. The protocol is built to support EVM-compatible blockchains and utilizes advanced AI and machine learning algorithms.",
     stack: ["React", "Redux", "Material UI"],
     // sourceCode: "https://github.com",
-    livePreview: "https://app.galileoprotocol.io/",
+    // livePreview: "https://app.galileoprotocol.io/",
   },
   {
     name: "React Dashboard",
