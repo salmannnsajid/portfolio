@@ -1,6 +1,6 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: "https://rjshkhr.github.io/cleanfolio",
+  homepage: "",
   title: "JS.",
 };
 
@@ -8,7 +8,7 @@ const about = {
   name: "Salman Sajid",
   role: "Front End Engineer",
   description:
-    "Frontend Developer with 4 years of experience specializing in React.js and Next.js. Proven track record of developing intuitive and user-friendly interfaces, optimizing performance, and delivering high-quality web applications. Skilled in integrating advanced features and collaborating with cross-functional teams to enhance user engagement and streamline business processes.",
+    "Frontend Developer with over 5 years of experience specializing in React.js and Next.js. Proven track record of developing intuitive and user-friendly interfaces, optimizing performance, and delivering high-quality web applications. Skilled in integrating advanced features and collaborating with cross-functional teams to enhance user engagement and streamline business processes.",
   resume:
     "https://github.com/salmannnsajid/portfolio/blob/master/public/resume.pdf",
   social: {
@@ -23,15 +23,6 @@ const projects = [
     description:
       "Contributed to the development of the Galileo Protocol, a cutting-edge tokenization platform aimed at transforming the ownership and authentication of luxury goods and real-world assets. The protocol is built to support EVM-compatible blockchains and utilizes advanced AI and machine learning algorithms.",
     stack: ["React", "Redux", "Material UI"],
-    // sourceCode: "https://github.com",
-    // livePreview: "https://app.galileoprotocol.io/",
-  },
-  {
-    name: "React Dashboard",
-    description:
-      "Designed and developed a dynamic and responsive Dashboard using React.js and Material-UI (MUI), ensuring a seamless user experience with efficient data visualization and interactive components.",
-    stack: ["React", "Material UI"],
-    livePreview: "https://salmannnsajid.github.io/react-dashboard",
   },
   {
     name: "Expense Tracker",
@@ -48,13 +39,27 @@ const skills = [
   "JavaScript",
   "TypeScript",
   "React",
+  "Next.js",
   "Redux",
-  "SASS",
+  "Zustand",
+  "React Hook Form",
+  "Zod",
+  "TanStack Query",
   "Material UI",
-  "Git",
-  "Tailwind",
-  "Next Js",
+  "Tailwind CSS",
+  "Chakra UI",
   "Bootstrap",
+  "SASS",
+  "Styled Components",
+  "Git",
+  "REST API",
+  "Node.js",
+  "NestJS",
+  "Express.js",
+  "PostgreSQL",
+  "TypeORM",
+  "Web3 Integration",
+  "Socket.io",
 ];
 
 const contact = {
