@@ -25,11 +25,31 @@ const projects = [
     stack: ["React", "Redux", "Material UI"],
   },
   {
+    name: "E-Commerce Store",
+    description:
+      "A full-featured e-commerce platform where users can browse products, add items to cart, manage orders, and securely checkout. Built with a Next.js frontend and a NestJS backend. The backend provides a RESTful API for authentication, product management, and order handling, all powered by PostgreSQL with TypeORM. Includes role-based access for customers and admins, product filtering, and responsive design.",
+    stack: [
+      "Next.js",
+      "Redux",
+      "Tailwind CSS",
+      "NestJS",
+      "PostgreSQL",
+      "TypeORM",
+      "Stripe API",
+    ],
+  },
+  {
     name: "Expense Tracker",
     description:
       "This expense tracker React app helps users track income and expenses, set budgets, and view financial summaries.",
     stack: ["React", "Material UI"],
     livePreview: "https://salmannnsajid.github.io/expense-tracker/",
+  },
+  {
+    name: "Inventory Management System",
+    description:
+      "A backend-driven application to manage inventory, track stock levels, record purchases/sales, and generate reports for businesses.",
+    stack: ["NestJS", "PostgreSQL", "TypeORM", "Swagger"],
   },
 ];
 
