@@ -6,22 +6,30 @@
 }
 
 .light {
-  --clr-bg: #fcfcfc;
-  --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
-  --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --clr-bg: #fafafa;
+  --clr-bg-alt: #ffffff;
+  --clr-fg: #4b4569;
+  --clr-fg-alt: #2e2a47;
+  --clr-primary: #7c3aed;
+  --shadow: rgba(100, 100, 111, 0.18) 0px 7px 29px 0px;
+  --shadow-glow: rgba(124, 58, 237, 0.22) 0px 8px 32px 0px;
+  --blob-1: rgba(124, 58, 237, 0.22);
+  --blob-2: rgba(236, 72, 153, 0.18);
+  --blob-3: rgba(6, 182, 212, 0.15);
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-bg: #1e1b2e;
+  --clr-bg-alt: #252235;
+  --clr-fg: #c4b5fd;
+  --clr-fg-alt: #ddd6fe;
+  --clr-primary: #a78bfa;
+  --shadow: rgba(0, 0, 0, 0.3) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  --shadow-glow: rgba(167, 139, 250, 0.22) 0px 8px 32px 0px;
+  --blob-1: rgba(167, 139, 250, 0.2);
+  --blob-2: rgba(244, 114, 182, 0.15);
+  --blob-3: rgba(6, 182, 212, 0.12);
 }
 
 main {
@@ -34,11 +42,7 @@ main {
   margin-top: 5em;
 }
 
-.section__title {
-  text-align: center;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-}
+/* .section__title is defined above with gradient */
 
 .center {
   display: flex;
@@ -143,6 +147,36 @@ main {
 
 .btn--icon:active {
   transform: translateY(-5px);
+}
+
+@keyframes shimmer {
+  from { background-position: 0% center;   }
+  to   { background-position: 200% center; }
+}
+
+/* gradient section titles — static, no animation */
+.section__title {
+  text-align: center;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, var(--clr-primary) 0%, #f472b6 50%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 600px) {

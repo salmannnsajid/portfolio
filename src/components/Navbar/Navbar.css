@@ -14,6 +14,15 @@
   margin-top: 0.4em;
 }
 
+.link--play {
+  background: linear-gradient(135deg, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+}
+
 @media (max-width: 600px) {
   .nav__list {
     display: none;

@@ -1,5 +1,6 @@
 import { projects } from "../../portfolio";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 import "./Projects.css";
 
 interface Project {
@@ -11,10 +12,11 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
+  const ref = useScrollReveal();
   if (!projects.length) return null;
 
   return (
-    <section id="projects" className="section projects">
+    <section ref={ref} id="projects" className="section projects reveal">
       <h2 className="section__title">Projects</h2>
 
       <div className="projects__grid">

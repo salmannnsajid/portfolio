@@ -1,33 +1,99 @@
 .project {
-  padding: 2em;
+  padding: 1.8em 2em;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  background-color: var(--clr-bg-alt);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+  position: relative;
+  overflow: hidden;
+}
+
+/* gradient top stripe, unique per project */
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.projects__grid .project:nth-child(1)::before {
+  background: linear-gradient(90deg, #a78bfa, #f472b6);
+}
+.projects__grid .project:nth-child(2)::before {
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+}
+.projects__grid .project:nth-child(3)::before {
+  background: linear-gradient(90deg, #f472b6, #fb923c);
 }
 
 .project:hover {
   transform: translateY(-7px);
+  box-shadow: var(--shadow-glow);
+}
+
+.project__top {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.8em;
+}
+
+.project__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-fg-alt);
+}
+
+.project__live-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: linear-gradient(135deg, #a78bfa, #f472b6);
+  padding: 0.15em 0.55em;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .project__description {
-  margin-top: 1em;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--clr-fg);
+  flex-grow: 1;
 }
 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 1.2em 0;
+  gap: 0.4em;
+  margin-top: 1.2em;
 }
 
 .project__stack-item {
-  margin: 0.5em;
-  font-weight: 500;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-primary);
+  padding: 0.2em 0.6em;
+  opacity: 0.85;
 }
 
-.project .link--icon {
-  margin-left: 0.5em;
+.project__links {
+  display: flex;
+  gap: 0.6em;
+  margin-top: 1.2em;
+}
+
+.project__links .link--icon {
+  color: var(--clr-fg);
+  transition: color 0.2s ease-in;
+}
+
+.project__links .link--icon:hover {
+  color: var(--clr-primary);
 }
