@@ -1,7 +1,43 @@
-Welcome to my portfolio built with React! This portfolio showcases my skills, projects, and experience as a frontend developer. It is fully responsive, with a modern design and user-friendly interface.
+# Salman Sajid — Portfolio
 
-Features
-Home Page: An introduction to my work, skills, and a brief overview of my journey as a developer.
-Projects: A detailed section where you can explore the projects I have worked on, with links to live demos and GitHub repositories.
-Skills: A comprehensive list of technologies and tools I am proficient in, including React, Redux, TypeScript, Material UI, and more.
-Contact: A form for getting in touch with me, including my email and links to my social profiles.
+Personal portfolio built with React, TypeScript, and Vite. Live at [salmannnsajid.github.io/portfolio](https://salmannnsajid.github.io/portfolio).
+
+## Sections
+
+- **About** — Brief intro, role summary, and resume link
+- **Experience** — Work history at Xeven Solutions, Argon Tech Inc., and XISLABS
+- **Projects** — The Business Hub Pakistan, Covis AI SaaS, and MyShahada
+- **Skills** — Frontend, backend, and tooling stack
+- **Contact** — Email and social links
+
+## Tech Stack
+
+| Area | Technologies |
+|---|---|
+| Frontend | React 19, TypeScript, Vite, Material UI, Emotion |
+| Styling | MUI v7, CSS3 |
+| Deployment | GitHub Pages via `gh-pages` |
+| Linting | ESLint 9, typescript-eslint |
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+| Script | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+| `npm run deploy` | Build and deploy to GitHub Pages |
+
+## Contact
+
+- Email: salmansajid141@gmail.com
+- LinkedIn: [linkedin.com/in/salman-sajid-77297b1ba](https://linkedin.com/in/salman-sajid-77297b1ba/)
+- GitHub: [github.com/salmannnsajid](https://github.com/salmannnsajid)
