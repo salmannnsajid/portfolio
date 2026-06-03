@@ -12,7 +12,7 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [themeName, setThemeName] = useState<string>("light");
+  const [themeName, setThemeName] = useState<string>("dark");
 
   useEffect(() => {
     const darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");

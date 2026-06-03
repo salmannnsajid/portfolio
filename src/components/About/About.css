@@ -89,9 +89,9 @@
 .about__name {
   background: linear-gradient(
     120deg,
-    var(--clr-primary) 0%,
-    #f472b6 45%,
-    var(--clr-primary) 100%
+    #7c5cf5 0%,
+    #9d8af0 45%,
+    #7c5cf5 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -165,9 +165,9 @@
   line-height: 1;
 }
 
-.about__stat:nth-child(1) .about__stat-value { color: #a78bfa; }
-.about__stat:nth-child(2) .about__stat-value { color: #f472b6; }
-.about__stat:nth-child(3) .about__stat-value { color: #22d3ee; }
+.about__stat:nth-child(1) .about__stat-value { color: var(--clr-fg-alt); }
+.about__stat:nth-child(2) .about__stat-value { color: var(--clr-fg); }
+.about__stat:nth-child(3) .about__stat-value { color: var(--clr-primary); }
 
 .about__stat-label {
   font-size: 0.75rem;

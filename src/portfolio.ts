@@ -67,7 +67,14 @@ const projects = [
     description:
       "Frontend modules for an AI-powered multi-tenant enterprise platform with AI agent dashboards, automated proposal generation, client management portals, and a full Jira-style project management module with Kanban drag-and-drop and sprint planning.",
     stack: ["Next.js", "NestJS", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "GitHub Actions"],
-    livePreview: "https://pms.covis.ai",
+    livePreview: "https://covis.ai",
+  },
+  {
+    name: "TAQWI — AI Recruitment Platform",
+    description:
+      "AI-based HR and recruitment platform combining multi-stage chat assessment with face-to-face AI avatar video evaluation. Built end-to-end from CEO requirements — now serving 20,000+ users.",
+    stack: ["React.js", "Node.js", "AI/LLM Integration", "Video APIs", "Tailwind CSS"],
+    livePreview: "https://taqwi.ai",
   },
   {
     name: "MyShahada",
@@ -75,6 +82,25 @@ const projects = [
       "World's first online Shahada platform — an Islamic education and certification portal connecting new Muslims with live scholars for verified revert certificates. Features Quran study, Hadith exploration, prayer times, mosque locator, halal food finder, and structured courses on Islamic fundamentals.",
     stack: ["Next.js", "Tailwind CSS", "Contentful CMS", "Node.js"],
     livePreview: "https://myshahada.net/home",
+  },
+];
+
+const capabilities = [
+  {
+    title: "Product Strategy",
+    description: "Turning fuzzy ideas and business goals into a clear, prioritized roadmap the team can actually build against.",
+  },
+  {
+    title: "Requirements & UX",
+    description: "Specs, wireframes and high-fidelity flows that remove ambiguity before a single line is written.",
+  },
+  {
+    title: "Full-stack Build",
+    description: "Hands-on delivery in React, Supabase & n8n. Shipping the thing — not just the plan for it.",
+  },
+  {
+    title: "AI Integration",
+    description: "Wiring AI into real products: chat assessment, voice-to-voice, segmentation and automation.",
   },
 ];
 
@@ -102,6 +128,8 @@ const skills = [
 
 const contact = {
   email: "salmansajid141@gmail.com",
+  linkedin: "https://linkedin.com/in/salman-sajid-77297b1ba/",
+  github: "https://github.com/salmannnsajid",
 };
 
-export { header, about, experience, projects, skillGroups, skills, contact };
+export { header, about, experience, projects, capabilities, skillGroups, skills, contact };

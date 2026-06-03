@@ -1,5 +1,3 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LaunchIcon from "@mui/icons-material/Launch";
 import "./ProjectContainer.css";
 
 interface Project {
@@ -14,52 +12,37 @@ interface ProjectContainerProps {
   project: Project;
 }
 
-const ProjectContainer: React.FC<ProjectContainerProps> = ({ project }) => (
-  <div className="project">
-    <div className="project__top">
-      <h3 className="project__name">{project.name}</h3>
-      {project.livePreview && (
-        <span className="project__live-badge">Live</span>
-      )}
-    </div>
+const ProjectContainer: React.FC<ProjectContainerProps> = ({ project }) => {
+  const href = project.livePreview || project.sourceCode;
 
-    <p className="project__description">{project.description}</p>
+  return (
+    <a
+      className="project"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      style={{ cursor: href ? "pointer" : "default", textDecoration: "none" }}
+    >
+      <div className="project__top">
+        <h3 className="project__name">{project.name}</h3>
+        {project.livePreview && (
+          <span className="project__live-badge">Live</span>
+        )}
+      </div>
 
-    {project.stack && (
-      <ul className="project__stack">
-        {project.stack.map((item, i) => (
-          <li key={i} className="project__stack-item">
-            {item}
-          </li>
-        ))}
-      </ul>
-    )}
+      <p className="project__description">{project.description}</p>
 
-    <div className="project__links">
-      {project.sourceCode && (
-        <a
-          href={project.sourceCode}
-          aria-label="source code"
-          className="link link--icon"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GitHubIcon />
-        </a>
+      {project.stack && (
+        <ul className="project__stack">
+          {project.stack.map((item, i) => (
+            <li key={i} className="project__stack-item">
+              {item}
+            </li>
+          ))}
+        </ul>
       )}
-      {project.livePreview && (
-        <a
-          href={project.livePreview}
-          aria-label="live preview"
-          className="link link--icon"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LaunchIcon />
-        </a>
-      )}
-    </div>
-  </div>
-);
+    </a>
+  );
+};
 
 export default ProjectContainer;
