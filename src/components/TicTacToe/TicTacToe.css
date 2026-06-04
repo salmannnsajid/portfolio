@@ -10,19 +10,34 @@
   100% { transform: scale(1);    opacity: 1; }
 }
 
-.ttt {
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+.ttt-section {
+  position: relative;
+  z-index: 1;
+  background-image: var(--section-background-color);
+  padding: 80px 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.ttt-section__title {
+  font-size: 2.1em;
+  color: white;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
 .ttt__subtitle {
   font-size: 0.88rem;
-  color: var(--clr-fg);
-  opacity: 0.55;
-  margin-top: -0.6em;
-  margin-bottom: 1.6em;
+  color: #a588c0;
+  opacity: 0.85;
+  margin-bottom: 2em;
   font-style: italic;
+  text-align: center;
 }
 
 .ttt__game {
@@ -31,23 +46,16 @@
   align-items: center;
   gap: 1.4em;
   padding: 2em 2.5em;
-  background: var(--clr-bg-alt);
-  box-shadow: var(--shadow);
+  background: rgba(27, 26, 46, 0.85);
+  border: 1px solid rgba(199, 112, 240, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 
-/* gradient top stripe */
-.ttt__game::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #a78bfa, #f472b6, #22d3ee, #a78bfa);
-  background-size: 200% auto;
-  animation: shimmer 3s linear infinite;
-}
 
-/* players row */
 .ttt__players {
   display: flex;
   align-items: center;
@@ -58,13 +66,13 @@
   letter-spacing: 0.06em;
 }
 
-.ttt__player--x { color: #a78bfa; }
-.ttt__player--o { color: #f472b6; }
+.ttt__player--x { color: #c770f0; }
+.ttt__player--o { color: #be50f4; }
 
 .ttt__vs {
   font-size: 0.72rem;
-  color: var(--clr-fg);
-  opacity: 0.4;
+  color: #a588c0;
+  opacity: 0.6;
 }
 
 .ttt__status {
@@ -72,42 +80,42 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--clr-primary);
+  color: #c770f0;
   min-height: 1.4em;
   transition: color 0.3s ease;
 }
 
 .ttt__status--win {
-  background: linear-gradient(135deg, #a78bfa, #f472b6);
+  background: linear-gradient(135deg, #c770f0, #7b2ff7);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-.ttt__status--lose  { color: #f472b6; }
-.ttt__status--draw  { color: #22d3ee; }
-.ttt__status--thinking { color: var(--clr-fg); opacity: 0.5; }
+.ttt__status--lose  { color: #be50f4; }
+.ttt__status--draw  { color: #a588c0; }
+.ttt__status--thinking { color: #a588c0; opacity: 0.7; }
 
 .ttt__board--thinking {
   opacity: 0.7;
   pointer-events: none;
 }
 
-/* board — gradient gap acts as grid lines */
 .ttt__board {
   display: grid;
   grid-template-columns: repeat(3, 72px);
   grid-template-rows: repeat(3, 72px);
   gap: 5px;
-  background: linear-gradient(135deg, #a78bfa 0%, #f472b6 50%, #22d3ee 100%);
+  background: linear-gradient(135deg, #c770f0 0%, #7b2ff7 60%, #9b59b6 100%);
   padding: 5px;
+  border-radius: 6px;
 }
 
 .ttt__cell {
   width: 72px;
   height: 72px;
-  background: var(--clr-bg);
+  background: #0c0513;
   font-size: 1.9rem;
   font-weight: 900;
   cursor: pointer;
@@ -121,34 +129,23 @@
 }
 
 .ttt__empty:not(:disabled):hover {
-  background: var(--clr-bg-alt);
-}
-
-.ttt__empty:not(:disabled):hover::after {
-  content: attr(data-next);
-  font-size: 1.9rem;
-  font-weight: 900;
-  opacity: 0.2;
+  background: rgba(199, 112, 240, 0.1);
 }
 
 .ttt__x {
-  color: #a78bfa;
-  text-shadow: 0 0 18px rgba(167, 139, 250, 0.55);
+  color: #c770f0;
+  text-shadow: 0 0 18px rgba(199, 112, 240, 0.6);
   animation: popIn 0.2s ease both;
 }
 
 .ttt__o {
-  color: #f472b6;
-  text-shadow: 0 0 18px rgba(244, 114, 182, 0.55);
+  color: #be50f4;
+  text-shadow: 0 0 18px rgba(190, 80, 244, 0.6);
   animation: popIn 0.2s ease both;
 }
 
 .ttt__win-cell {
-  background: linear-gradient(
-    135deg,
-    rgba(167, 139, 250, 0.18),
-    rgba(244, 114, 182, 0.18)
-  );
+  background: rgba(199, 112, 240, 0.15);
   animation: winPulse 0.5s ease both;
 }
 
@@ -160,17 +157,17 @@
   letter-spacing: 0.07em;
   padding: 0.6em 2em;
   cursor: pointer;
-  border: 2px solid transparent;
-  background:
-    linear-gradient(var(--clr-bg-alt), var(--clr-bg-alt)) padding-box,
-    linear-gradient(135deg, #a78bfa, #f472b6) border-box;
-  color: var(--clr-primary);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-radius: 8px;
+  border: 2px solid #c770f0;
+  background: transparent;
+  color: #c770f0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .ttt__reset:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+  background: rgba(199, 112, 240, 0.12);
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.35);
 }
 
 @media (max-width: 600px) {

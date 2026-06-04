@@ -1,108 +1,103 @@
-import { useContext, useState } from "react";
-import Brightness2Icon from "@mui/icons-material/Brightness2";
-import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import { ThemeContext } from "../../contexts/theme";
-import { experience, projects, skills, contact } from "../../portfolio";
+import { useEffect, useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import {
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { CgFileDocument } from "react-icons/cg";
+import { contact } from "../../portfolio";
 import "./Navbar.css";
 
-const Navbar: React.FC = () => {
-  const context = useContext(ThemeContext);
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
-  if (!context) {
-    throw new Error("ThemeContext must be used within a ThemeProvider");
-  }
+const SECTIONS = ["home", "about", "project", "resume", "play"];
 
-  const { themeName, toggleTheme } = context;
-  const [showNavList, setShowNavList] = useState<boolean>(false);
+const NavBar: React.FC = () => {
+  const [expand, setExpand] = useState(false);
+  const [navColour, setNavColour] = useState(false);
+  const [active, setActive] = useState("home");
 
-  const toggleNavList = () => setShowNavList(!showNavList);
+  useEffect(() => {
+    const onScroll = () => setNavColour(window.scrollY >= 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    SECTIONS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const iconStyle: React.CSSProperties = { verticalAlign: "middle", marginBottom: "3px" };
+
+  const link = (id: string, icon: React.ReactNode, label: string) => (
+    <Nav.Item key={id}>
+      <Nav.Link
+        onClick={() => { scrollTo(id); setExpand(false); }}
+        className={active === id ? "active" : ""}
+        style={{ cursor: "pointer" }}
+      >
+        <span style={iconStyle}>{icon}</span> {label}
+      </Nav.Link>
+    </Nav.Item>
+  );
 
   return (
-    <nav className="center nav">
-      <ul
-        style={{ display: showNavList ? "flex" : undefined }}
-        className="nav__list"
-      >
-        {experience.length ? (
-          <li className="nav__list-item">
-            <a
-              href="#experience"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Experience
-            </a>
-          </li>
-        ) : null}
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+      data-bs-theme="dark"
+    >
+      <Container>
+        <Navbar.Brand
+          onClick={() => scrollTo("home")}
+          style={{ cursor: "pointer" }}
+          className="d-flex"
+        >
+          <span style={{ color: "#c770f0", fontWeight: 700, fontSize: "1.4em" }}>SS.</span>
+        </Navbar.Brand>
 
-        {projects.length ? (
-          <li className="nav__list-item">
-            <a
-              href="#projects"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Projects
-            </a>
-          </li>
-        ) : null}
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => setExpand((v) => !v)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
 
-        {skills.length ? (
-          <li className="nav__list-item">
-            <a
-              href="#skills"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Skills
-            </a>
-          </li>
-        ) : null}
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="home">
+            {link("home",    <AiOutlineHome />,                     "Home")}
+            {link("about",   <AiOutlineUser />,                     "About")}
+            {link("project", <AiOutlineFundProjectionScreen />,     "Projects")}
+            {link("resume",  <CgFileDocument />,                    "Resume")}
 
-        {contact.email ? (
-          <li className="nav__list-item">
-            <a
-              href="#contact"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Contact
-            </a>
-          </li>
-        ) : null}
-
-        <li className="nav__list-item">
-          <a
-            href="#play"
-            onClick={toggleNavList}
-            className="link link--nav link--play"
-          >
-            Play
-          </a>
-        </li>
-      </ul>
-
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className="btn btn--icon nav__theme"
-        aria-label="toggle theme"
-      >
-        {themeName === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button>
-
-      <button
-        type="button"
-        onClick={toggleNavList}
-        className="btn btn--icon nav__hamburger"
-        aria-label="toggle navigation"
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button>
-    </nav>
+            {link("play", <AiOutlineFundProjectionScreen />, "Play")}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;

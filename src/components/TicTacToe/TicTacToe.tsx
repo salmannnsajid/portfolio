@@ -102,8 +102,8 @@ const TicTacToe: React.FC = () => {
     : isDevTurn ? "Thinking..." : "Your turn (X)";
 
   return (
-    <section ref={ref} id="play" className="section ttt reveal">
-      <h2 className="section__title">Take a Break</h2>
+    <section ref={ref} id="play" className="ttt-section">
+      <h2 className="ttt-section__title">Take a <strong className="purple">Break</strong></h2>
       <p className="ttt__subtitle">you've seen the work — now beat the dev's algorithm</p>
 
       <div className="ttt__game">
