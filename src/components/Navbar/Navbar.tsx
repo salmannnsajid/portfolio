@@ -8,7 +8,6 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import { contact } from "../../portfolio";
 import "./Navbar.css";
 
 const scrollTo = (id: string) => {

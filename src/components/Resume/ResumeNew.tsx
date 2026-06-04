@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Particle from "../Particle/Particle";
 import { HiDownload } from "react-icons/hi";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -28,15 +27,14 @@ const ResumeNew: React.FC = () => {
       <Particle />
 
       <Row style={{ justifyContent: "center", position: "relative", zIndex: 2 }}>
-        <Button
-          variant="primary"
+        <a
           href={resumePath}
           download="Salman_Sajid_Resume.pdf"
-          style={{ maxWidth: "250px" }}
-          className="fork-btn"
+          className="btn btn-primary fork-btn"
+          style={{ maxWidth: "250px", display: "inline-flex", alignItems: "center", justifyContent: "center" }}
         >
           <HiDownload /> &nbsp;Download CV
-        </Button>
+        </a>
       </Row>
 
       <Row className="resume" style={{ justifyContent: "center" }}>

@@ -172,7 +172,7 @@ const MatrixRain: React.FC = () => {
     /* type next character */
     const tid = setTimeout(() => {
       const map = flatLine.current[curCharIdx];
-      setCurLine(prev => {
+      setCurLine(() => {
         const next = line.map((tok, ti) => {
           if (ti < map.tok) return tok;
           if (ti === map.tok) return { ...tok, t: tok.t.slice(0, map.char + 1) };
