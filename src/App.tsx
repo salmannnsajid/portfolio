@@ -16,6 +16,7 @@ import AboutPage from "./components/About/AboutPage";
 import ProjectsPage from "./components/Projects/ProjectsPage";
 import TicTacToe from "./components/TicTacToe/TicTacToe";
 import ResumeNew from "./components/Resume/ResumeNew";
+import { useResetScrollOnMount } from "./hooks/useResetScrollOnMount";
 
 const initParticles = async (engine: Engine) => {
   await loadSlim(engine);
@@ -24,9 +25,13 @@ const initParticles = async (engine: Engine) => {
 function App() {
   const [load, setLoad] = useState(true);
 
+  useResetScrollOnMount();
+
   useEffect(() => {
     const timer = setTimeout(() => setLoad(false), 1200);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
