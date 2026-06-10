@@ -5,7 +5,6 @@ import { ImPointRight } from "react-icons/im";
 import Particle from "../Particle/Particle";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
-import Tilt from "react-parallax-tilt";
 import { about, contact } from "../../portfolio";
 
 const AboutPage: React.FC = () => {
@@ -14,10 +13,10 @@ const AboutPage: React.FC = () => {
       <Particle />
       <Container>
 
-        {/* ── Intro + image ── */}
+        {/* ── Intro ── */}
         <Row style={{ justifyContent: "center", paddingTop: "60px", paddingBottom: "20px" }}>
-          <Col md={7} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
+          <Col md={10} className="home-about-description">
+            <h1 style={{ fontSize: "2.6em", textAlign: "center" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
@@ -85,17 +84,6 @@ const AboutPage: React.FC = () => {
                 )}
               </ul>
             </div>
-          </Col>
-
-          <Col md={5} className="about-img" style={{ paddingTop: "80px", paddingBottom: "50px" }}>
-            <Tilt>
-              <img
-                src="https://raw.githubusercontent.com/soumyajit4419/Portfolio/master/src/Assets/about.png"
-                alt="about"
-                className="img-fluid"
-                style={{ maxHeight: "380px" }}
-              />
-            </Tilt>
           </Col>
         </Row>
 
