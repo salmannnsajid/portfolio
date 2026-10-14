@@ -5,9 +5,9 @@ const header = {
 
 const about = {
   name: "Salman Sajid",
-  role: "Full Stack Developer",
+  role: "Senior Frontend Developer",
   description:
-    "Full Stack Developer with 5+ years of experience building production-grade React/Next.js applications across SaaS, blockchain, and enterprise platforms. Currently shipping The Business Hub Pakistan — a live multi-portal SaaS product with 6,000+ active users. Fluent across the full stack — React and Next.js on the frontend, Node.js and NestJS on the backend, PostgreSQL and Supabase for data, and N8N for workflow automation.",
+    "Senior Frontend Developer at DigitalTribe with 5+ years of experience building production-grade React/Next.js applications across SaaS, blockchain, and enterprise platforms. Shipped The Business Hub Pakistan — a live multi-portal SaaS product with 6,000+ active users. Fluent across the full stack — React, Next.js and TypeScript on the frontend, Node.js, Express and NestJS on the backend, MongoDB, PostgreSQL and Supabase for data, and N8N for workflow automation.",
   resume:
     "https://github.com/salmannnsajid/portfolio/blob/master/public/resume.pdf",
   social: {
@@ -18,9 +18,20 @@ const about = {
 
 const experience = [
   {
+    company: "DigitalTribe",
+    role: "Senior Frontend Developer",
+    period: "Sep 2026 – Present",
+    location: "Lahore, Pakistan",
+    highlights: [
+      "Leading development of scalable, high-performance web applications with React.js, Next.js, and TypeScript",
+      "Architecting reusable component systems and guiding frontend best practices across the team",
+      "Collaborating with design and backend teams to deliver polished user experiences",
+    ],
+  },
+  {
     company: "Xeven Solutions",
     role: "Full Stack Developer — MERN + Next.js & NestJS",
-    period: "Jul 2025 – Present",
+    period: "Jul 2025 – Jul 2026",
     location: "Lahore, Pakistan",
     highlights: [
       "Delivered The Business Hub Pakistan — multi-portal SaaS (admin, investor, founder) serving 6,000+ active users",
@@ -50,6 +61,15 @@ const experience = [
       "Improved data collection efficiency ~50% for Tammam form platform with RESTful API integration",
       "Reduced invoice errors ~30% for Fatoraty POS via Redux-driven real-time state synchronization",
       "Increased Lighthouse performance scores by 20 points by migrating to functional React with Hooks",
+    ],
+  },
+  {
+    company: "Workwox",
+    role: "React JS Intern",
+    period: "Feb 2021 – May 2021",
+    location: "Sahiwal, Pakistan",
+    highlights: [
+      "Assisted in developing frontend components and gained practical experience with React.js",
     ],
   },
 ];
@@ -115,7 +135,7 @@ const skillGroups = [
   },
   {
     category: "Tools & Practices",
-    skills: ["Git", "GitHub Actions CI/CD", "Vite", "N8N Automation", "WebSockets", "Jest", "Cypress"],
+    skills: ["Git", "GitHub Actions CI/CD", "Vite", "N8N Automation", "Mastra", "WebSockets", "Jest", "Cypress"],
   },
 ];
 
@@ -123,7 +143,7 @@ const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "Redux", "Zustand",
   "TanStack Query", "Material UI", "shadcn/ui", "Tailwind CSS", "HTML5", "CSS3",
   "Node.js", "NestJS", "Express.js", "PostgreSQL", "Supabase", "MongoDB", "RESTful APIs",
-  "Git", "GitHub Actions CI/CD", "Vite", "N8N Automation", "WebSockets", "Jest", "Cypress",
+  "Git", "GitHub Actions CI/CD", "Vite", "N8N Automation", "Mastra", "WebSockets", "Jest", "Cypress",
 ];
 
 const contact = {

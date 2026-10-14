@@ -7,11 +7,13 @@ import {
   SiN8N,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { TbRobot } from "react-icons/tb";
 
 const tools = [
   { icon: <VscVscode />,        label: "VS Code",         color: "#007ACC" },
   { icon: <SiClaude />,         label: "Claude",          color: "#CC785C" },
   { icon: <SiN8N />,            label: "n8n",             color: "#EA4B71" },
+  { icon: <TbRobot />,          label: "Mastra",          color: "#ffffff" },
   { icon: <SiGithubactions />,  label: "GitHub Actions",  color: "#2088FF" },
   { icon: <SiPostman />,        label: "Postman",         color: "#FF6C37" },
   { icon: <SiNetlify />,        label: "Netlify",         color: "#00C7B7" },

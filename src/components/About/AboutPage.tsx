@@ -22,8 +22,8 @@ const AboutPage: React.FC = () => {
             <p className="home-about-body">
               Hi, I am <span className="purple">{about.name}</span> from{" "}
               <span className="purple">Lahore, Pakistan</span>, currently working as a{" "}
-              <span className="purple">Full Stack Developer</span> at{" "}
-              <span className="purple">Xeven Solutions</span>.
+              <span className="purple">Senior Frontend Developer</span> at{" "}
+              <span className="purple">DigitalTribe</span>.
               <br /><br />
               I have <b className="purple">5+ years</b> of experience building
               production-grade web applications. I'm fluent in{" "}
@@ -31,9 +31,10 @@ const AboutPage: React.FC = () => {
               shipped products across SaaS, blockchain, and enterprise platforms.
               <br /><br />
               My passion lies in building scalable{" "}
-              <b className="purple">SaaS products</b> with strong interest in{" "}
-              <b className="purple">AI integrations</b> and{" "}
-              <b className="purple">workflow automation</b>.
+              <b className="purple">SaaS products</b> and bringing AI into them —
+              from designing <b className="purple">custom AI agents with Mastra</b>{" "}
+              that reason, use tools, and handle multi-step tasks, to automating
+              workflows end-to-end with <b className="purple">n8n</b>.
             </p>
 
             <p style={{ color: "white", marginTop: "1.2em", marginBottom: "0.5em" }}>
