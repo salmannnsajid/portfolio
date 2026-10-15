@@ -9,7 +9,7 @@ const Home2: React.FC = () => {
         <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
           <Col md={12}>
             <h1 className="project-heading">
-              Professional <strong className="purple">Experience</strong>
+              Professional <strong className="accent">Experience</strong>
             </h1>
           </Col>
         </Row>
@@ -21,7 +21,7 @@ const Home2: React.FC = () => {
                 <div key={i} className="exp-item">
                   <div className="exp-marker" />
                   <div className="exp-content">
-                    <h4 className="exp-company" style={{ color: "#c770f0" }}>
+                    <h4 className="exp-company" style={{ color: "var(--accent)" }}>
                       {item.company}
                     </h4>
                     <p className="exp-role" style={{ color: "whitesmoke", fontWeight: 500 }}>
@@ -29,7 +29,7 @@ const Home2: React.FC = () => {
                     </p>
                     <p
                       className="exp-period"
-                      style={{ color: "#a588c0", fontSize: "0.9em" }}
+                      style={{ color: "var(--muted)", fontSize: "0.9em" }}
                     >
                       {item.period} · {item.location}
                     </p>
@@ -38,7 +38,7 @@ const Home2: React.FC = () => {
                         <li
                           key={j}
                           style={{
-                            color: "#b0b0c8",
+                            color: "#cbd5e1",
                             fontSize: "0.95em",
                             marginBottom: "4px",
                             listStyleType: "disc",

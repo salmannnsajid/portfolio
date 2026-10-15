@@ -52,7 +52,7 @@ const ResumeNew: React.FC = () => {
             file={resumePath}
             onLoadSuccess={onLoadSuccess}
             loading={
-              <p style={{ color: "#a588c0", padding: "60px", fontFamily: "monospace" }}>
+              <p style={{ color: "var(--muted)", padding: "60px", fontFamily: "monospace" }}>
                 Loading resume…
               </p>
             }

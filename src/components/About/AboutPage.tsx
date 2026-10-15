@@ -17,24 +17,24 @@ const AboutPage: React.FC = () => {
         <Row style={{ justifyContent: "center", paddingTop: "60px", paddingBottom: "20px" }}>
           <Col md={10} className="home-about-description">
             <h1 style={{ fontSize: "2.6em", textAlign: "center" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="accent"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Hi, I am <span className="purple">{about.name}</span> from{" "}
-              <span className="purple">Lahore, Pakistan</span>, currently working as a{" "}
-              <span className="purple">Senior Frontend Developer</span> at{" "}
-              <span className="purple">DigitalTribe</span>.
+              Hi, I am <span className="accent">{about.name}</span> from{" "}
+              <span className="accent">Lahore, Pakistan</span>, currently working as a{" "}
+              <span className="accent">Senior Frontend Developer</span> at{" "}
+              <span className="accent">DigitalTribe</span>.
               <br /><br />
-              I have <b className="purple">5+ years</b> of experience building
+              I have <b className="accent">5+ years</b> of experience building
               production-grade web applications. I'm fluent in{" "}
-              <b className="purple">React.js, Next.js, Node.js &amp; NestJS</b> and have
+              <b className="accent">React.js, Next.js, Node.js &amp; NestJS</b> and have
               shipped products across SaaS, blockchain, and enterprise platforms.
               <br /><br />
               My passion lies in building scalable{" "}
-              <b className="purple">SaaS products</b> and bringing AI into them —
-              from designing <b className="purple">custom AI agents with Mastra</b>{" "}
+              <b className="accent">SaaS products</b> and bringing AI into them —
+              from designing <b className="accent">custom AI agents with Mastra</b>{" "}
               that reason, use tools, and handle multi-step tasks, to automating
-              workflows end-to-end with <b className="purple">n8n</b>.
+              workflows end-to-end with <b className="accent">n8n</b>.
             </p>
 
             <p style={{ color: "white", marginTop: "1.2em", marginBottom: "0.5em" }}>
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
             {/* social links */}
             <div className="home-about-social" style={{ paddingTop: "30px" }}>
               <h1>FIND ME ON</h1>
-              <p>Feel free to <span className="purple">connect </span>with me</p>
+              <p>Feel free to <span className="accent">connect </span>with me</p>
               <ul className="home-about-social-links">
                 {contact.github && (
                   <li className="social-icons">
@@ -90,12 +90,12 @@ const AboutPage: React.FC = () => {
 
         {/* ── Skills & Tools ── */}
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset</strong>
+          Professional <strong className="accent">Skillset</strong>
         </h1>
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I Use
+          <strong className="accent">Tools</strong> I Use
         </h1>
         <Toolstack />
 

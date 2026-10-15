@@ -51,7 +51,7 @@ const ProjectCards: React.FC<ProjectCardProps> = ({
             height: FIXED_PREVIEW_H,
             overflow: "hidden",
             position: "relative",
-            background: "#0c0513",
+            background: "#0f172a",
             cursor: "pointer",
             borderRadius: "4px 4px 0 0",
           }}
@@ -77,19 +77,19 @@ const ProjectCards: React.FC<ProjectCardProps> = ({
           <div style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, transparent 55%, rgba(12,5,19,0.75) 100%)",
+            background: "linear-gradient(to bottom, transparent 55%, rgba(15,23,42,0.75) 100%)",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "flex-end",
             padding: "8px 10px",
           }}>
             <span style={{
-              background: "rgba(199,112,240,0.18)",
-              border: "1px solid rgba(199,112,240,0.4)",
+              background: "rgba(45,212,191,0.15)",
+              border: "1px solid rgba(45,212,191,0.45)",
               borderRadius: 6,
               padding: "3px 9px",
               fontSize: "0.68rem",
-              color: "#e0aaff",
+              color: "#5eead4",
               fontFamily: "monospace",
             }}>
               ↗ live

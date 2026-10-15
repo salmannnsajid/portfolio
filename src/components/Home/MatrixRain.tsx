@@ -103,11 +103,11 @@ const MatrixRain: React.FC = () => {
       style={{
         width: 420,
         maxWidth: "100%",
-        background: "#0d0d1a",
+        background: "#0b1120",
         borderRadius: 12,
-        border: "1px solid rgba(199,112,240,0.2)",
+        border: "1px solid rgba(148,163,184,0.2)",
         boxShadow:
-          "0 0 50px rgba(199,112,240,0.12), 0 0 100px rgba(123,47,247,0.07)",
+          "0 20px 50px rgba(0,0,0,0.45)",
         overflow: "hidden",
         fontFamily: "'Fira Code', 'Cascadia Code', 'Consolas', monospace",
       }}
@@ -119,8 +119,8 @@ const MatrixRain: React.FC = () => {
           alignItems: "center",
           gap: 8,
           padding: "9px 14px",
-          background: "#12101f",
-          borderBottom: "1px solid rgba(199,112,240,0.15)",
+          background: "#111a2e",
+          borderBottom: "1px solid rgba(148,163,184,0.15)",
         }}
       >
         {["#ff5f57", "#febc2e", "#28c840"].map((bg) => (
@@ -135,7 +135,7 @@ const MatrixRain: React.FC = () => {
             }}
           />
         ))}
-        <span style={{ marginLeft: "auto", color: "#7b5ea7", fontSize: "0.72rem" }}>
+        <span style={{ marginLeft: "auto", color: "#64748b", fontSize: "0.72rem" }}>
           {SNIPPET_FILENAMES[snippetIdx]}
         </span>
       </div>
@@ -148,7 +148,7 @@ const MatrixRain: React.FC = () => {
             width: 38,
             textAlign: "right",
             paddingRight: 12,
-            color: "#3d3557",
+            color: "#334155",
             fontSize: "0.75rem",
             lineHeight: "1.5em",
             userSelect: "none",
@@ -185,10 +185,10 @@ const MatrixRain: React.FC = () => {
                 display: "inline-block",
                 width: 2,
                 height: "1em",
-                background: blink ? "#c770f0" : "transparent",
+                background: blink ? "#2dd4bf" : "transparent",
                 verticalAlign: "text-bottom",
                 marginLeft: 1,
-                boxShadow: blink ? "0 0 6px #c770f0" : "none",
+                boxShadow: blink ? "0 0 6px #2dd4bf" : "none",
                 transition: "background 0.1s",
               }}
             />
@@ -202,14 +202,14 @@ const MatrixRain: React.FC = () => {
           display: "flex",
           justifyContent: "space-between",
           padding: "4px 14px",
-          background: "#12101f",
-          borderTop: "1px solid rgba(199,112,240,0.1)",
-          color: "#7b5ea7",
+          background: "#111a2e",
+          borderTop: "1px solid rgba(148,163,184,0.12)",
+          color: "#64748b",
           fontSize: "0.65rem",
         }}
       >
         <span>TypeScript · UTF-8</span>
-        <span style={{ color: "#c770f0" }}>Ln {visibleLines.length + 1}</span>
+        <span style={{ color: "#2dd4bf" }}>Ln {visibleLines.length + 1}</span>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const ProjectsPage: React.FC = () => {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works</strong>
+          My Recent <strong className="accent">Works</strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
@@ -23,6 +23,7 @@ const ProjectsPage: React.FC = () => {
                 title={project.name}
                 description={project.description}
                 demoLink={project.livePreview}
+                ghLink={project.github}
               />
             </Col>
           ))}

@@ -1,11 +1,11 @@
 export const K = {
-  kw: "#c770f0", // keywords
-  fn: "#dda0dd", // function / hook names
+  kw: "#2dd4bf", // keywords
+  fn: "#7dd3fc", // function / hook names
   ty: "#7ec8e3", // types / interfaces
   str: "#98c379", // strings
   cm: "#6b7280", // comments
-  tx: "#abb2bf", // plain text
-  op: "#e0aaff", // operators / punctuation
+  tx: "#cbd5e1", // plain text
+  op: "#94a3b8", // operators / punctuation
   pr: "#e06c75", // properties / methods
   nu: "#d19a66", // numbers / booleans
 };

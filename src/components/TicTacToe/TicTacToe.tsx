@@ -103,7 +103,7 @@ const TicTacToe: React.FC = () => {
 
   return (
     <section ref={ref} id="play" className="ttt-section">
-      <h2 className="ttt-section__title">Take a <strong className="purple">Break</strong></h2>
+      <h2 className="ttt-section__title">Take a <strong className="accent">Break</strong></h2>
       <p className="ttt__subtitle">you've seen the work — now beat the dev's algorithm</p>
 
       <div className="ttt__game">

@@ -72,7 +72,7 @@ const NavBar: React.FC = () => {
           style={{ cursor: "pointer" }}
           className="d-flex"
         >
-          <span style={{ color: "#c770f0", fontWeight: 700, fontSize: "1.4em" }}>SS.</span>
+          <span style={{ color: "var(--accent)", fontWeight: 700, fontSize: "1.4em" }}>SS.</span>
         </Navbar.Brand>
 
         <Navbar.Toggle

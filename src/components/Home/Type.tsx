@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const roles = [
-  "Senior Frontend Developer",
-  "React & Next.js Engineer",
-  "SaaS Platform Architect",
-  "Node.js API Developer",
-  "Web Performance Strategist",
+  "Senior Frontend Engineer",
+  "React & Next.js Developer",
+  "AI Agent Builder — Mastra",
+  "Workflow Automation — n8n",
+  "Node.js & NestJS Developer",
 ];
 
 const Type: React.FC = () => {
