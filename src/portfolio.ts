@@ -108,8 +108,9 @@ const projects = [
     name: "Company Assistant Agent — Mastra",
     description:
       "Custom AI agent built with Mastra that turns plain-English questions like “Which projects are at risk?” or “Is anyone overloaded?” into live answers from the company database. Purpose-built tools for project health, overdue work and team workload, a guarded text-to-SQL fallback, conversation memory, and a Next.js chat UI with streaming replies and voice mode. Every tool call is traced in Mastra Studio.",
-    stack: ["Mastra", "Next.js", "TypeScript", "Vercel AI SDK", "SQLite", "Groq (LLM + Whisper)"],
+    stack: ["Mastra", "Next.js", "TypeScript", "Vercel AI SDK", "SQLite", "Groq (LLM + Whisper)", "Docker"],
     github: "https://github.com/salmannnsajid/ai-company-assistant",
+    livePreview: "https://ai-company-assistant-g64k.onrender.com/",
   },
   {
     name: "Workflow Automations — n8n",
@@ -149,7 +150,7 @@ const skillGroups = [
   },
   {
     category: "AI & Tools",
-    skills: ["Mastra", "n8n", "Git", "GitHub Actions CI/CD", "Vite"],
+    skills: ["Mastra", "n8n", "Git", "GitHub Actions CI/CD", "Docker", "Vite"],
   },
 ];
 
