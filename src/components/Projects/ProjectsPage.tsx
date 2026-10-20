@@ -24,6 +24,7 @@ const ProjectsPage: React.FC = () => {
                 description={project.description}
                 demoLink={project.livePreview}
                 ghLink={project.github}
+                image={project.image}
               />
             </Col>
           ))}

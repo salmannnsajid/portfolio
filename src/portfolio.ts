@@ -1,3 +1,5 @@
+import n8nWorkflows from "./assets/n8n-workflows.svg";
+
 const header = {
   homepage: "",
   title: "JS.",
@@ -117,6 +119,7 @@ const projects = [
     description:
       "Business workflow automations built with n8n: a lead capture flow that detects new leads, appends them to a Google Sheet and handles email notifications and follow-ups, plus an AI support auto-responder that matches incoming tickets against a database of prebuilt answers and replies automatically, falling back to a generic response when no match is found.",
     stack: ["n8n", "Google Sheets", "Gmail/SMTP", "LLM Integration", "Database"],
+    image: n8nWorkflows,
   },
 ];
 

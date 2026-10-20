@@ -13,6 +13,7 @@ interface ProjectCardProps {
   description: string;
   ghLink?: string;
   demoLink?: string;
+  image?: string;
 }
 
 const ProjectCards: React.FC<ProjectCardProps> = ({
@@ -21,6 +22,7 @@ const ProjectCards: React.FC<ProjectCardProps> = ({
   description,
   ghLink,
   demoLink,
+  image,
 }) => {
   const wrapRef  = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.26);
@@ -96,6 +98,21 @@ const ProjectCards: React.FC<ProjectCardProps> = ({
             </span>
           </div>
         </div>
+      )}
+
+      {/* ── static preview ── */}
+      {!demoLink && image && (
+        <img
+          src={image}
+          alt={title}
+          style={{
+            width: "100%",
+            height: FIXED_PREVIEW_H,
+            objectFit: "cover",
+            display: "block",
+            borderRadius: "4px 4px 0 0",
+          }}
+        />
       )}
 
       <Card.Body>
